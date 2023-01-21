@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Bookshelf Apps</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap"
+        rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+ </head>
+
+<body>
+ <header>
+  <a class="title">Bookshelf Apps</a>
+  <ul>
+   <li><a href="#Home">Home</a></li>
+   <li><a href="#add">Tambah Buku</a></li>
+   <li><a href="#rak">Rak Buku</a></li>
+   <li><a href="#best">Rekomendasi Buku</a></li>
+  </ul>
+ </header>
+
+ <div id="Home" class="home">
+ <section class="text-home">
+  <h2 >Selamat datang,</h2><br>
+  <p>disini kamu bisa membuat list buku sesuka hatimu.<br> Kamu bisa menambah dan menghapus buku.</p><br>
+  
+ </section>
+ <button id="start">Start</button>
+</div>
+
+ <div id="add" class="add">
+   <button type="button" onclick="klik()">Tambah Buku Baru</button>
+   <br>
+
+  <section class="input_section">
+    <h2>Masukkan Buku Baru</h2>
+    <form id="inputBook">
+      <div class="input">
+        <label for="inputBookTitle">Judul</label>
+        <input id="inputBookTitle" type="text" required>
+      </div>
+      <div class="input">
+        <label for="inputBookAuthor">Penulis</label>
+        <input id="inputBookAuthor" type="text" required>
+      </div>
+      <div class="input">
+        <label for="inputBookYear">Tahun</label>
+        <input id="inputBookYear" type="number" required>
+      </div>
+      <div class="input_inline">
+        <label for="inputBookIsComplete" id="selesai">Selesai dibaca</label>
+        <input id="inputBookIsComplete" type="radio" name="group1"><br>
+
+        <br><label id="Belum">Belum selesai dibaca</label>
+        <input type="radio" name="group1" >
+      </div>
+
+      <button id="bookSubmit" type="submit"><b>Masukkan Buku ke rak<b></button>
+    </form>
+  </section>
+ </div>
+
+ <div id="rak" class="rak">
+  <h2>Rak Buku</h2>
+    <section class="book_shelf">
+    <h2>Belum selesai dibaca</h2>    
+    <div id="incompleteBookshelfList" class="book_list">
+    </div>
+  </section>
+
+  <section class="book_shelf">
+    <h2>Selesai dibaca</h2>    
+    <div id="completeBookshelfList" class="book_list">
+    </div>
+  </section>
+ </div>
+
+ <div id="best" class="best">
+  <section class="search_section">
+   <h2>Cari Rekomendasi Buku Berdasarkan Genre</h2><br>
+   <p>Disini kamu bisa mendapatkan rekomendasi buku berdasarkan genre yang kamu inputkan. Inputkan genre dengan huruf kecil. Contoh genre: horor, romance, filsafat, aksi, biografi, sejarah dan lain sebagainya. Selamat Mencoba!</p>
+    <form id="searchBook">
+      <label for="searchBookTitle">Genre</label>
+      <input id="searchBookTitle" type="text">
+      <button id="searchSubmit" type="button">Cari</button>
+    </form>
+    <div id="hasil"></div>
+  </section>
+ </div>
+
+ <script type="text/javascript" src="script.js"></script>
+</body>
+
+ </html>
